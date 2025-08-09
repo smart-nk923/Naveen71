@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Tasks — a Todoist-style Landing Page</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<!-- CSS -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a class="brand" href="#">
+        <span class="logo" aria-hidden="true">T</span>
+        <div>
+          <h1>Tasks</h1>
+          <div class="muted" style="font-size:12px;margin-top:2px">Get things done</div>
+        </div>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <a href="#">Features</a>
+        <a href="#">Pricing</a>
+        <a href="#">Resources</a>
+        <a href="#">For teams</a>
+      </nav>
+
+      <div class="actions">
+        <button class="btn" id="loginBtn">Log in</button>
+        <button class="btn primary" id="getStarted">Get started</button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+      </div>
+    </header>
+
+    <!-- small mobile drawer -->
+    <div class="drawer" id="drawer" aria-hidden="true">
+      <a href="#">Features</a>
+      <a href="#">Pricing</a>
+      <a href="#">Resources</a>
+      <a href="#">For teams</a>
+      <hr style="border:0;height:1px;background:rgba(255,255,255,0.03);margin:8px 0">
+      <a href="#" id="drawerLogin">Log in</a>
+      <a href="#" id="drawerGet" style="font-weight:700">Get started</a>
+    </div>
+
+    <main>
+      <section class="hero">
+        <div class="hero-left">
+          <h2>Organize your life. Focus on what matters.</h2>
+          <p>Simple, powerful to-do lists and task management for individuals and teams. Capture ideas, plan projects, and stay on top of every detail.</p>
+
+          <div class="signup" style="margin-top:18px;">
+            <input class="email" id="emailInput" type="email" placeholder="Enter your email" />
+            <button class="btn primary" id="signupBtn">Start free</button>
+          </div>
+
+          <div style="margin-top:12px;color:var(--muted);font-size:13px">
+            No credit card • Cancel anytime
+            <span style="margin-left:10px" class="pill">Free plan</span>
+          </div>
+        </div>
+
+        <aside class="hero-right" aria-hidden="false">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+            <div class="muted" style="font-size:13px">My tasks</div>
+            <div class="muted" style="font-size:13px">Today • 5</div>
+          </div>
+
+          <div class="task-card" role="list">
+            <div class="task-item" role="listitem" style="background:linear-gradient(90deg, rgba(255,82,82,0.04), transparent);">
+              <div class="bullet"></div>
+              <div>
+                <div class="task-title">Finish landing page design</div>
+                <div class="muted" style="font-size:12px">Project — Website</div>
+              </div>
+            </div>
+
+            <div class="task-item" role="listitem">
+              <div class="bullet"></div>
+              <div>
+                <div class="task-title">Plan next sprint</div>
+                <div class="muted" style="font-size:12px">Team — Engineering</div>
+              </div>
+            </div>
+
+            <div class="task-item" role="listitem">
+              <div class="bullet"></div>
+              <div>
+                <div class="task-title">Buy groceries</div>
+                <div class="muted" style="font-size:12px">Personal</div>
+              </div>
+            </div>
+
+            <div class="task-item" role="listitem" style="justify-content:center;color:var(--muted);font-weight:700">
+              + Add task
+            </div>
+          </div>
+
+          <div class="muted" style="font-size:12px;margin-top:10px">Sync across devices • Reminders • Sub-tasks</div>
+        </aside>
+      </section>
+
+      <section class="features" aria-label="Features">
+        <div class="feature">
+          <h3>Simple & fast</h3>
+          <p>Create tasks quickly with natural language, organize with projects and labels, and focus using priorities.</p>
+        </div>
+        <div class="feature">
+          <h3>Powerful organization</h3>
+          <p>Projects, sections, tags, and filters let you structure work your way — from simple lists to complex workflows.</p>
+        </div>
+        <div class="feature">
+          <h3>Work together</h3>
+          <p>Share projects, assign tasks, and get progress updates — collaboration made easy for small teams.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px">
+        <div>
+          <strong>Tasks</strong><div class="muted" style="margin-top:6px">Made with ❤️ — built as an example</div>
+        </div>
+
+        <div class="muted" style="display:flex;gap:18px;align-items:center">
+          <a href="#" style="color:var(--muted);text-decoration:none">Privacy</a>
+          <a href="#" style="color:var(--muted);text-decoration:none">Terms</a>
+          <a href="#" style="color:var(--muted);text-decoration:none">Contact</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+<!-- JS -->
+<script src="script.js"></script>
+</body>
+</html>
